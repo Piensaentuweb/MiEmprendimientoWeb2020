@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6, a {
 }
 .header {
   height: 50vh;
-  background: url(/assets/images/desarrolloweb2021t.svg);
+  background: url(../images/desarrolloweb2021t.svg);
   background-size: cover;
   background-position: center;
   margin-right: auto;
