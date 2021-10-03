@@ -1,0 +1,21 @@
+.header {
+    height: 50vh;
+    background: url(/assets/images/desarrolloweb2021t.svg);
+    background-size: cover;
+    background-position: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+    .header {
+        height: 35vh;
+    }
+}

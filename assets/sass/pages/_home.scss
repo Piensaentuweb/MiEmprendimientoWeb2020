@@ -1,0 +1,183 @@
+// Seccion Frontend
+.content {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.5rem;
+}
+
+.frontend {
+    border: 1px solid $border;
+    display: flex;
+    flex-direction: column;
+
+    &__imgTech {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: $large;
+        font-weight: $font-bold;
+    }
+
+    &__description {
+        margin: 0;
+        font-size: $medium;
+        text-align: justify;
+    }
+
+    &__name {
+        font-size: $medium;
+        font-weight: $font-bold;
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    &__item {
+        margin: 0.5rem;
+        margin-top: 0;
+    }
+
+    &__link {
+        color: $black;
+        font-size: 1rem;
+    }
+
+    &__border {
+        border: 1px solid $border;
+        padding: 1rem;
+        margin: .25rem;
+    }
+
+
+}
+
+
+// Seccion Cursos
+.cursos {
+    border: 1px solid #c2c9d6;
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: $large;
+        font-weight: $font-bold;
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        justify-content: center;
+
+    }
+
+    &__item {
+        margin: 0.5rem;
+        margin-top: 0;
+    }
+
+
+    &__link {
+        color: $sable;
+        font-size: 1.5rem;
+    }
+
+    &__link:hover {
+        color: $orange;
+    }
+
+    &__imgDev {
+        width: 100%;
+        max-width: 157px;
+        border-radius: 50%;
+    }
+
+    &__description {
+        text-align: left;
+        font-size: $medium;
+        text-align: justify;
+    }
+
+    &__button {
+        background-color: $charcoal;
+        color: $white;
+        padding: 10px 0px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: $large;
+        cursor: pointer;
+        font-weight: $font-bold;
+        width: 100%;
+    }
+
+    &__button:hover {
+        background-color: $orange;
+        color: $white;
+    }
+
+    &__list-name {
+        text-align: left;
+        color: $charcoal;
+        font-weight: $font-regular;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    &__item-name:hover {
+        color: $orange;
+        cursor: pointer;
+    }
+
+    &__item-name {
+        list-style-type: circle;
+    }
+
+    &__gif {
+        width: 30%;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        .cursos {
+            margin-top: 1rem;
+
+            &__gif {
+                width: 40%;
+            }
+
+            &__imgDev {
+                max-width: 220px;
+            }
+
+        }
+    }
+
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}

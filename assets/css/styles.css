@@ -1,0 +1,373 @@
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  margin: 1em;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+body {
+  font-family: "Poppins", serif;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: "Ubuntu", serif;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.etiqueta {
+  animation: translate 2s linear infinite alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tuerca__interna,
+.tuerca__externa {
+  animation: rotate 2s linear infinite;
+  transform-origin: 80% 80%;
+}
+
+.navbar {
+  /* width: 100%; */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.navbar__list {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 2rem 1rem;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 35%;
+  right: 0px;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+}
+.navbar__item {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5rem;
+}
+.navbar__item:hover {
+  color: #ffa500;
+  cursor: pointer;
+}
+.navbar__item--toggler {
+  text-decoration: none;
+  width: 10%;
+}
+.navbar__toggler:hover {
+  fill: #ffa500;
+  cursor: pointer;
+}
+.navbar input[type=checkbox] {
+  display: none;
+}
+.navbar input[type=checkbox]:checked ~ .navbar__list {
+  transform: translateX(0%);
+}
+.navbar__logo {
+  width: 100%;
+  max-width: 40px;
+}
+.navbar__menu {
+  fill: #fff;
+}
+.navbar__menu:hover {
+  fill: #ffa500;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .navbar__toggler {
+    display: none;
+  }
+
+  .navbar__list {
+    height: auto;
+    width: auto;
+    transform: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+}
+.header {
+  height: 50vh;
+  background: url(/assets/images/desarrolloweb2021t.svg);
+  background-size: cover;
+  background-position: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  max-width: 870px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 35vh;
+  }
+}
+/* Footer */
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 0;
+}
+.footer__text {
+  color: #fff;
+  text-align: center;
+}
+.footer__links {
+  color: #fff;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0rem;
+  margin-right: 1rem;
+}
+.footer__link:hover {
+  color: #ffa500;
+}
+.footer__form {
+  display: flex;
+}
+.footer__form--button {
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid white;
+  background: orange;
+  border-radius: 8px 8px 8px 8px;
+  height: 27px;
+}
+.footer__form--submit {
+  border-radius: 8px 8px 8px 8px;
+  border: 0;
+  margin-right: 10px;
+  height: 27px;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__links {
+    flex-direction: row;
+    align-items: center;
+  }
+  .footer__links .link {
+    margin-bottom: 0rem;
+    margin-right: 1em;
+  }
+}
+@media (max-width: 768px) {
+  .footer__form {
+    margin-top: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__link {
+    margin-bottom: 1rem;
+  }
+
+  .footer__form--button {
+    margin-top: 1rem;
+  }
+}
+.content {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.5rem;
+}
+
+.frontend {
+  border: 1px solid #c2c9d6;
+  display: flex;
+  flex-direction: column;
+}
+.frontend__imgTech {
+  width: 100%;
+}
+.frontend__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.frontend__description {
+  margin: 0;
+  font-size: 16px;
+  text-align: justify;
+}
+.frontend__name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.frontend__list {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.frontend__item {
+  margin: 0.5rem;
+  margin-top: 0;
+}
+.frontend__link {
+  color: #000000;
+  font-size: 1rem;
+}
+.frontend__border {
+  border: 1px solid #c2c9d6;
+  padding: 1rem;
+  margin: 0.25rem;
+}
+
+.cursos {
+  border: 1px solid #c2c9d6;
+  display: flex;
+  flex-direction: column;
+}
+.cursos__content {
+  text-align: center;
+}
+.cursos__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.cursos__list {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+}
+.cursos__item {
+  margin: 0.5rem;
+  margin-top: 0;
+}
+.cursos__link {
+  color: #060606;
+  font-size: 1.5rem;
+}
+.cursos__link:hover {
+  color: #ffa500;
+}
+.cursos__imgDev {
+  width: 100%;
+  max-width: 157px;
+  border-radius: 50%;
+}
+.cursos__description {
+  text-align: left;
+  font-size: 16px;
+  text-align: justify;
+}
+.cursos__button {
+  background-color: #2e1503;
+  color: #fff;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+}
+.cursos__button:hover {
+  background-color: #ffa500;
+  color: #fff;
+}
+.cursos__list-name {
+  text-align: left;
+  color: #2e1503;
+  font-weight: 400;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.cursos__item-name:hover {
+  color: #ffa500;
+  cursor: pointer;
+}
+.cursos__item-name {
+  list-style-type: circle;
+}
+.cursos__gif {
+  width: 30%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
+@media (max-width: 768px) {
+  .cursos .cursos {
+    margin-top: 1rem;
+  }
+  .cursos .cursos__gif {
+    width: 40%;
+  }
+  .cursos .cursos__imgDev {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
